@@ -64,4 +64,11 @@ a {
 
 .item1 .duration-container .duration{
   margin-bottom: 1rem;
+  font-weight: 500;
+  opacity: 0.5;
 }
+
+.item1 .duration-container .duration:first-child{
+  opacity: 1;
+}
+

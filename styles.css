@@ -1,0 +1,21 @@
+body {
+  background-color: hsl(226, 43%, 10%);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2rem;
+}
+
+.grid-container > div {
+  background-color: hsl(235, 46%, 20%);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+

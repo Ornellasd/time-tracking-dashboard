@@ -12,12 +12,23 @@ a {
 
 .grid-container {
   margin: 0 auto;
-  width: 80vw;
   display: grid;
   /* grid-template-columns: auto auto auto auto; */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   /* grid-template-rows: */
   grid-gap: 2rem;
+}
+
+@media (min-width: 1440px) {
+  .grid-container {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .grid-container {
+    margin: 0 1rem;
+  }
 }
 
 .grid-container > div {

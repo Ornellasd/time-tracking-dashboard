@@ -11,3 +11,17 @@ durationButtons.forEach(button => {
     button.style.opacity = '1';
   });
 });
+
+const fetchTimeData = async () => {
+  const response = await fetch('data.json');
+  const timeData = await response.json();
+  parseTimeData(timeData);
+}
+
+const parseTimeData = (data) => {
+  data.forEach(timeCategory => {
+    console.log(timeCategory);
+  });
+}
+
+fetchTimeData();

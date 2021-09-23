@@ -70,18 +70,18 @@ a {
   width: 175px;
 }
 
-.item1 .duration-container {
+.item1 .timeframe-container {
   padding-top: 1rem;
   padding-left: 2rem;
 }
 
-.item1 .duration-container .duration{
+.item1 .timeframe-container .timeframe{
   margin-bottom: 1rem;
   font-weight: 500;
   opacity: 0.5;
 }
 
-.item1 .duration-container .duration:first-child{
+.item1 .timeframe-container .timeframe:first-child{
   opacity: 1;
 }
 

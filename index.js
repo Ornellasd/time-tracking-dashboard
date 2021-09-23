@@ -40,9 +40,18 @@ const parseTimeData = (data) => {
 const createDataMarkup = (subject, timeObject) => {
   return `
     <div class="subject-details">
-      <h1>${timeObject.title}</h1>
-      <h1>WORK</h1>
-      <h1>WORK</h1>
+      <div class="details-container">
+        <div class="details-header">
+          <span>${timeObject.title}</span>
+          <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" />
+        </div>
+        <h1>WORK</h1>
+        <h1>WORK</h1>
+        <h1>WORK</h1>
+        <h1>WORK</h1>
+        <h1>WORK</h1>
+
+      </div>
     </div>
   `;
 };

@@ -73,32 +73,44 @@ a {
   opacity: 1;
 }
 
+.work-time, .play-time, .study-time, .exercise-time, .social-time, .selfcare-time {
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 90% 2%;
+}
+
 .work-time {
   background-color: hsl(43, 84%, 65%);
+  background-image: url(./images/icon-work.svg);
 }
 
 .play-time {
   background-color: hsl(195, 74%, 62%);
+  background-image: url(./images/icon-play.svg);
 }
 
 .study-time {
   background-color: hsl(348, 100%, 68%);
+  background-image: url('./images/icon-study.svg');
 }
 
 .exercise-time {
   background-color: hsl(145, 58%, 55%);
+  background-image: url('./images/icon-exercise.svg');
 }
 
 .social-time {
   background-color: hsl(264, 64%, 52%);
+  background-image: url('./images/icon-social.svg');
 }
 
 .selfcare-time {
   background-color: hsl(43, 84%, 65%);
+  background-image: url('./images/icon-self-care.svg');
 }
 
 .time-subject {
-  
+  padding-top: 1.5rem;
 }
 
 .time-subject .subject-details {

@@ -38,6 +38,7 @@ const parseTimeData = (data) => {
 }
 
 const createDataMarkup = (subject, timeObject) => {
+  console.log(timeObject);
   return `
     <div class="subject-details">
       <div class="details-container">
@@ -45,12 +46,12 @@ const createDataMarkup = (subject, timeObject) => {
           <span>${timeObject.title}</span>
           <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" />
         </div>
-        <h1>WORK</h1>
-        <h1>WORK</h1>
-        <h1>WORK</h1>
-        <h1>WORK</h1>
-        <h1>WORK</h1>
-
+        <div class="time">
+          <span>${timeObject.timeframes.daily.current}hrs</span>
+        </div>
+        <div class="previous-time">
+          <span>Last Week - ${timeObject.timeframes.daily.previous}hrs</span>
+        </div>
       </div>
     </div>
   `;

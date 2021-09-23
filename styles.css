@@ -135,8 +135,8 @@ a {
 .time-subject .subject-details .details-container {
   /* padding-top: 1rem; */
   margin-top: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   padding-top: 2rem;
 }
 
@@ -145,10 +145,27 @@ a {
   justify-content: space-between;
   font-size: 18px;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .time-subject .subject-details .details-container .details-header img {
   padding-top: 5px;
   width: 10%;
   height: 10%;
+}
+
+.time-subject .subject-details .details-container .time {
+  margin-bottom: 1rem;
+}
+
+.time-subject .subject-details .details-container .time span {
+  font-size: 42px;
+}
+
+.time-subject .subject-details .details-container .previous-time {
+  margin-bottom: 1rem;
+}
+
+.time-subject .subject-details .details-container .previous-time span {
+  font-weight: 500;
 }

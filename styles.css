@@ -1,17 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
 body {
   background-color: hsl(226, 43%, 10%);
+  font-family: 'Rubik', sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .grid-container {
+  margin: 0 auto;
+  width: 80vw;
   display: grid;
   /* grid-template-columns: auto auto auto auto; */
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-rows: */
   grid-gap: 2rem;
 }
 
 .grid-container > div {
   background-color: hsl(235, 46%, 20%);
-  text-align: center;
+  /* text-align: center; */
   border-radius: 1rem;
 }
 
@@ -20,3 +31,37 @@ body {
   grid-row-end: 4;
 }
 
+.item1 .card-header {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 1rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.item1 img {
+  width: 25%;
+  margin-bottom: 3rem;
+}
+
+.item1 span {
+  color: #fff;
+  display: block;
+}
+
+.item1 .name {
+  font-size: 30px;
+}
+
+.item1 .header-info {
+  padding-bottom: 5rem;
+  width: 175px;
+}
+
+.item1 .duration-container {
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.item1 .duration-container .duration{
+  margin-bottom: 1rem;
+}

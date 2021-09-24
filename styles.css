@@ -63,12 +63,17 @@ body {
 }
 
 .item1 .name {
-  font-size: 30px;
+  font-size: 42px;
+  font-weight: 300;
 }
 
 .item1 .header-info {
   padding-bottom: 5rem;
   width: 175px;
+}
+
+.item1 .header-info span:first-child {
+  color: hsl(236, 100%, 87%)
 }
 
 @media (max-width: 375px) {
@@ -192,7 +197,7 @@ body {
 }
 
 .time-subject .subject-details .details-container .time span {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 300;
 }
 

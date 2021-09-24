@@ -38,6 +38,7 @@ body {
   background-color: hsl(235, 46%, 20%);
   grid-row-start: 1;
   grid-row-end: 4;
+  height: 95.7%;
 }
 
 .item1 .card-header {
@@ -147,6 +148,7 @@ body {
   background-color: hsl(235, 46%, 20%);
   border-radius: 1rem;
   height: 100%;
+  /* padding-bottom: 1.5rem; */
 }
 
 .time-subject .subject-details:hover {
@@ -181,7 +183,8 @@ body {
 }
 
 .time-subject .subject-details .details-container .time span {
-  font-size: 42px;
+  font-size: 48px;
+  font-weight: 300;
 }
 
 .time-subject .subject-details .details-container .previous-time {

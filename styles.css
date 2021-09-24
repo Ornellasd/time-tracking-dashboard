@@ -31,6 +31,11 @@ body {
 
   .grid-container {
     margin: 1rem 1rem 0;
+    row-gap: 1.5rem;
+  }
+
+  .grid-container > div:nth-child(2) {
+    margin-top: -1rem;
   }
 }
 
@@ -123,7 +128,8 @@ body {
 }
 
 .item1 .timeframe-container .timeframe {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  padding-bottom: 1.5rem;
   font-weight: 500;
   color: hsl(235, 45%, 61%)
 }
@@ -172,26 +178,15 @@ body {
   background-image: url('./images/icon-self-care.svg');
 }
 
-@media (orientation: portrait) {
-  .time-subject {
-    margin-bottom: 2.5rem;
-  }
-}
-
 .time-subject {
   padding-top: 1.5rem;
-}
-
-@media(orientation: landscape) {
-  .time-subject .subject-details {
-    height: 100%;
-  }
 }
 
 .time-subject .subject-details {
   color: #fff;
   background-color: hsl(235, 46%, 20%);
   border-radius: 1rem;
+  height: 100%;
 }
 
 .time-subject .subject-details:hover {
@@ -199,15 +194,12 @@ body {
   cursor: pointer;
 }
 
-.time-subject .subject-details .details-container {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 @media(orientation: landscape) {
   .time-subject .subject-details .details-container {
-    margin-top: 1.5rem;
     padding-top: 2rem;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .time-subject .subject-details .details-container .details-header {
@@ -219,6 +211,8 @@ body {
   .time-subject .subject-details .details-container {
     padding-top: 1rem;
     margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 
   .time-subject .subject-details .details-container .details-header {

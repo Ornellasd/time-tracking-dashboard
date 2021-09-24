@@ -16,10 +16,12 @@ timeframeButtons.forEach(button => {
     }
 
     timeframeButtons.forEach(button => {
-      button.style.opacity = '0.5';
+      // button.style.opacity = '0.5';
+      button.style.color = 'hsl(235, 45%, 61%)';
     });
     
-    button.style.opacity = '1';
+    // button.style.opacity = '1';
+    button.style.color = '#fff';
   });
 });
 

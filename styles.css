@@ -54,7 +54,6 @@ body {
 }
 
 .item1 span {
-  /* color: hsl(235, 45%, 61%); */
   color: #fff;
   display: block;
 }
@@ -79,7 +78,6 @@ body {
 
 @media (min-width: 1440px) {
   .item1 .timeframe-container {
-    /* height: 100%; */
     padding-left: 2rem;
     display: block flex;
     justify-content: space-around;
@@ -93,14 +91,18 @@ body {
   font-size: 18px;
 }
 
-.item1 .timeframe-container .timeframe{
+.item1 .timeframe-container .timeframe {
   margin-bottom: 1rem;
   font-weight: 500;
-  opacity: 0.5;
+  color: hsl(235, 45%, 61%)
+}
+
+.item1 .timeframe-container .timeframe a {
+  cursor: pointer;
 }
 
 .item1 .timeframe-container .timeframe:first-child{
-  opacity: 1;
+  color: #fff;
 }
 
 .work-time, .play-time, .study-time, .exercise-time, .social-time, .selfcare-time {

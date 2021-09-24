@@ -44,11 +44,13 @@ const createDataMarkup = (title, timeObject) => {
           <span>${title}</span>
           <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" />
         </div>
-        <div class="time">
-          <span>${timeObject.current}hrs</span>
-        </div>
-        <div class="previous-time">
-          <span>${previousTimeLabel} - ${timeObject.previous}hrs</span>
+        <div class="details-time">
+          <div class="current-time">
+            <span>${timeObject.current}hrs</span>
+          </div>
+          <div class="previous-time">
+            <span>${previousTimeLabel} - ${timeObject.previous}hrs</span>
+          </div>
         </div>
       </div>
     </div>

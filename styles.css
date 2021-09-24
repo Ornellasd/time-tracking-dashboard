@@ -182,12 +182,16 @@ body {
   padding-top: 1.5rem;
 }
 
+@media(orientation: landscape) {
+  .time-subject .subject-details {
+    height: 100%;
+  }
+}
+
 .time-subject .subject-details {
   color: #fff;
   background-color: hsl(235, 46%, 20%);
   border-radius: 1rem;
-  height: 100%;
-  /* padding-bottom: 1.5rem; */
 }
 
 .time-subject .subject-details:hover {
@@ -196,19 +200,38 @@ body {
 }
 
 .time-subject .subject-details .details-container {
-  /* padding-top: 1rem; */
-  margin-top: 1.5rem;
   margin-left: 2rem;
   margin-right: 2rem;
-  padding-top: 2rem;
 }
+
+@media(orientation: landscape) {
+  .time-subject .subject-details .details-container {
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+  }
+
+  .time-subject .subject-details .details-container .details-header {
+    margin-bottom: 1rem;
+  }
+}
+
+@media(orientation: portrait) {
+  .time-subject .subject-details .details-container {
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .time-subject .subject-details .details-container .details-header {
+    margin-bottom: 0.5rem;
+  }
+}
+
 
 .time-subject .subject-details .details-container .details-header {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
 
 .time-subject .subject-details .details-container .details-header img {
@@ -217,12 +240,35 @@ body {
   height: 10%;
 }
 
-.time-subject .subject-details .details-container .time {
+@media(orientation: portrait) {
+  .details-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.time-subject .subject-details .details-container .current-time {
   margin-bottom: 1rem;
 }
 
-.time-subject .subject-details .details-container .time span {
-  font-size: 50px;
+@media(orientation: landscape) {
+  .time-subject .subject-details .details-container .current-time span {
+    font-size: 50px;
+  }
+}
+
+@media(orientation: portrait) {
+  .time-subject .subject-details .details-container .current-time span {
+    font-size: 30px;
+  }
+
+  .time-subject .subject-details .details-container .previous-time span {
+    margin-top: 1rem;
+  }
+}
+
+.time-subject .subject-details .details-container .current-time span {
   font-weight: 300;
 }
 

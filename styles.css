@@ -53,8 +53,11 @@ body {
 }
 
 .item1 img {
-  width: 25%;
-  margin-bottom: 3rem;
+  width: 35%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 3px solid #fff;
+  border-radius: 100%;
 }
 
 .item1 span {
@@ -68,8 +71,9 @@ body {
 }
 
 .item1 .header-info {
-  padding-bottom: 5rem;
-  width: 175px;
+  /* padding-bottom: 3rem; */
+  /* width: 175px; */
+  padding-bottom: 4rem;
 }
 
 .item1 .header-info span:first-child {
@@ -87,7 +91,7 @@ body {
 @media (min-width: 1440px) {
   .item1 .timeframe-container {
     padding-left: 2rem;
-    padding-top: 3rem;
+    padding-top: 1.5rem;
   }
 
   /* .item1 .timeframe-container span {} */

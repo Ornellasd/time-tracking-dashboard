@@ -2,26 +2,20 @@ const timeframeButtons = document.querySelectorAll('.timeframe');
 const timeSubjects = document.querySelectorAll('.time-subject');
 
 let timeDataArray;
+let timeframeSelection;
 
 timeframeButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(button.getAttribute('data-timeframe') === 'daily') {
-      console.log('DAILY');
-    } else if(button.getAttribute('data-timeframe') === 'weekly') {
-      console.log('WEEKLY');
-    } else if(button.getAttribute('data-timeframe') === 'monthly') {
-      console.log('MONTHLY');
-    }
-
     timeframeButtons.forEach(button => {
-      // button.style.opacity = '0.5';
       button.style.color = 'hsl(235, 45%, 61%)';
     });
     
-    // button.style.opacity = '1';
     button.style.color = '#fff';
+
+    timeframeSelection = button.getAttribute('data-timeframe');
+    displayMessageMarkup(timeDataArray);
   });
 });
 
@@ -29,43 +23,46 @@ const fetchTimeData = async () => {
   const response = await fetch('data.json');
   const timeData = await response.json();
   timeDataArray = timeData;
-  parseTimeData(timeDataArray);
   displayMessageMarkup(timeDataArray);
 }
 
-const parseTimeData = (data) => {
-  data.forEach(timeCategory => {
-    // console.log(timeCategory);
-  });
-}
-
-const createDataMarkup = (subject, timeObject) => {
-  console.log(timeObject);
+const createDataMarkup = (title, timeObject) => {
   return `
     <div class="subject-details">
       <div class="details-container">
         <div class="details-header">
-          <span>${timeObject.title}</span>
+          <span>${title}</span>
           <img src="./images/icon-ellipsis.svg" alt="Icon Ellipsis" />
         </div>
         <div class="time">
-          <span>${timeObject.timeframes.daily.current}hrs</span>
+          <span>${timeObject.current}hrs</span>
         </div>
         <div class="previous-time">
-          <span>Last Week - ${timeObject.timeframes.daily.previous}hrs</span>
+          <span>Last Week - ${timeObject.previous}hrs</span>
         </div>
       </div>
     </div>
   `;
 };
 
-const displayMessageMarkup = (timeData) => {
+const selectedTimeframe = (timeObject) => {
+  switch(timeframeSelection) {
+    case 'daily':
+      return timeObject.timeframes.daily;
+    case 'weekly':
+      return timeObject.timeframes.weekly;
+    case 'monthly':
+      return timeObject.timeframes.monthly;
+    default:
+      return timeObject.timeframes.daily;
+  }
+}
 
-  console.log(timeData);
+const displayMessageMarkup = (timeData) => {
   timeSubjects.forEach(subject => {
     timeData.forEach(timeObject => {
       if(subject.getAttribute('data-subject') === timeObject.title) {
-        subject.innerHTML = createDataMarkup(subject, timeObject);
+        subject.innerHTML = createDataMarkup(timeObject.title, selectedTimeframe(timeObject));      
       }
     });
   });

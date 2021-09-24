@@ -27,6 +27,16 @@ const fetchTimeData = async () => {
 }
 
 const createDataMarkup = (title, timeObject) => {
+  let previousTimeLabel = 'Yesterday';
+
+  if(timeframeSelection === 'daily') {
+    previousTimeLabel = 'Yesterday'
+  } else if(timeframeSelection === 'weekly') {
+    previousTimeLabel = 'Last Week'
+  } else if(timeframeSelection === 'monthly') {
+    previousTimeLabel = 'Last Month'
+  }
+
   return `
     <div class="subject-details">
       <div class="details-container">
@@ -38,7 +48,7 @@ const createDataMarkup = (title, timeObject) => {
           <span>${timeObject.current}hrs</span>
         </div>
         <div class="previous-time">
-          <span>Last Week - ${timeObject.previous}hrs</span>
+          <span>${previousTimeLabel} - ${timeObject.previous}hrs</span>
         </div>
       </div>
     </div>
